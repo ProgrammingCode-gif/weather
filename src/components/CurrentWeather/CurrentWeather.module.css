@@ -46,6 +46,7 @@
 
 .icon {
     width: 150px;
+    height: 150px;
 }
 
 .contentRight {
@@ -74,3 +75,6 @@
     font-size: 25px;
     font-weight: 400;
 }
+
+
+

@@ -1,7 +1,7 @@
 const images = {
     ['Sunny']: '/public/icons/sun.svg',
     ['Clear']: '/public/icons/sun.svg',
-    ['Partly Cloudy']: '/public/icons/minicloud.svg',
+    ['Partly cloudy']: '/public/icons/minicloud.svg',
     ['Cloudy']: '/public/icons/cloud.svg',
     ['Overcast']: '/public/icons/cloud.svg',
     ['Mist']: '/public/icons/osadki.svg',

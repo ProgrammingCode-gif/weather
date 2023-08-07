@@ -21,3 +21,21 @@ body {
     width: 100%;
     margin: 0 auto;
 }
+
+.current-enter {
+    opacity: 0;
+    transform: translateY(100%);
+}
+.current-enter-active {
+    opacity: 1;
+    transition: all 1000ms;
+    transform: translateY(0);
+}
+.current-exit {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  .current-exit-active {
+    opacity: 0;
+    transition: all 200ms;
+  }

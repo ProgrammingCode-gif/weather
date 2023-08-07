@@ -2,7 +2,6 @@ import React, { useRef } from 'react'
 import Header from './components/Header/Header'
 import CurrentWeather from './components/CurrentWeather/CurrentWeather'
 import { CSSTransition } from 'react-transition-group';
-import Loading from './components/Loading/Loading';
 import { useWeather } from './hooks/useWeather';
 import { Puff, useLoading } from '@agney/react-loading';
 
@@ -33,7 +32,7 @@ const App = () => {
       >
 
         {
-          loading ? <Loading /> : <CurrentWeather nodeRef={nodeRef} weather={data}/>
+          loading ? '' : <CurrentWeather nodeRef={nodeRef} weather={data}/>
         }
 
       </CSSTransition>

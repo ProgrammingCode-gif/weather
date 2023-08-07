@@ -4,6 +4,7 @@ import { LiaWindSolid } from 'react-icons/lia'
 import { GiBinoculars } from 'react-icons/gi'
 import { TiWeatherWindy } from 'react-icons/ti'
 import { useMemo } from 'react'
+import { getImage } from '../../utils/getImage'
 
 const CurrentWeather = ({ weather }) => {
     const {current, location} = useMemo(() => {
@@ -18,7 +19,7 @@ const CurrentWeather = ({ weather }) => {
             <div className={styles.content}>
 
                 <div className={styles.contentLeft}>
-                    <img className={styles.icon} src={current.condition.icon} alt="" />
+                    <img className={styles.icon} src={getImage(current.condition.text)} alt="" />
                     <p>Сегодня: {Math.round(current.temp_c)}°С</p>
                 </div>
 
@@ -29,7 +30,7 @@ const CurrentWeather = ({ weather }) => {
                     </div>
                     <div className={styles.contentRightItem}>
                         <GiBinoculars size={40} color='rgb(85, 85, 224)' />
-                        <p>Видимость: {Math.round(current.vis_km)} м</p>
+                        <p>Видимость: {Math.round(current.vis_km)} км</p>
                     </div>
                     <div className={styles.contentRightItem}>
                         <TiWeatherWindy size={40} color='rgb(228, 120, 57)' />

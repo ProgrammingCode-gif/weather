@@ -20,8 +20,7 @@
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
-    gap: 50px;
-    width: 100%;
+    gap: 100px;
 }
 
 .contentLeft {
@@ -29,15 +28,24 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    border-radius: 20px;
+    padding: 20px;
+    transition: all .4s;
+}
+
+.contentLeft:hover {
+    background-color: #3e3d3d;
+    box-shadow: var(--shadow-item);
+    transform: scale(1.02);
 }
 
 .contentLeft p {
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 300;
 }
 
 .icon {
-    width: 300px;
+    width: 150px;
 }
 
 .contentRight {

@@ -34,8 +34,16 @@ body {
 .current-exit {
     transform: translateY(100%);
     opacity: 1;
-  }
+}
   .current-exit-active {
     opacity: 0;
     transition: all 200ms;
-  }
+}
+
+.loading-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    color: rgb(93, 61, 255);
+}

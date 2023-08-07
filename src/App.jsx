@@ -1,43 +1,42 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import Header from './components/Header/Header'
 import CurrentWeather from './components/CurrentWeather/CurrentWeather'
-import { useLocation } from './hooks/useLocation';
-import { getCurrentWeather } from './api/weather';
-import { useQuery } from 'react-query';
 import { CSSTransition } from 'react-transition-group';
 import Loading from './components/Loading/Loading';
+import { useWeather } from './hooks/useWeather';
+import { Puff, useLoading } from '@agney/react-loading';
 
 const App = () => {
   const nodeRef = useRef()
-  const { lat, long } = useLocation()
-  const [loading, setLoading] = useState(true)
-  const { data } = useQuery({
-    queryKey: ['weather'],
-    queryFn: () => getCurrentWeather(lat, long),
-    enabled: !!long,
-    onSuccess: () => {
-      setTimeout(() => {
-        setLoading(false)
-        
-      }, 1000);
-    }
+  const {loading, data} = useWeather()
+  const {indicatorEl} = useLoading({
+    loading,
+    indicator: <Puff width="100" />
   })
-
   return (
     <div>
       <Header />
       <div className="container">
 
       {
-        loading && <Loading />
+        loading && 
+        <div className="loading-box">{indicatorEl}</div>
       }
 
-      <CSSTransition nodeRef={nodeRef} mountOnEnter unmountOnExit in={!loading} timeout={5000} classNames='current'>
+      <CSSTransition 
+        nodeRef={nodeRef} 
+        mountOnEnter 
+        unmountOnExit 
+        in={!loading} 
+        timeout={5000} 
+        classNames='current'
+      >
 
         {
           loading ? <Loading /> : <CurrentWeather nodeRef={nodeRef} weather={data}/>
         }
-        </CSSTransition>
+
+      </CSSTransition>
 
       </div>
     </div>

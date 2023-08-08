@@ -37,7 +37,7 @@ body {
     transform: translateY(100%);
     opacity: 1;
 }
-  .current-exit-active {
+.current-exit-active {
     opacity: 0;
     transition: all 200ms;
 }
@@ -53,6 +53,7 @@ body {
 .bg-icon {
     position: absolute;
     z-index: -1;
+    transition: 200ms;
 }
 
 .bg-icon:first-of-type {

@@ -4,6 +4,7 @@ import CurrentWeather from './components/CurrentWeather/CurrentWeather'
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { useWeather } from './hooks/useWeather';
 import { Puff, useLoading } from '@agney/react-loading';
+import WeeklyWeather from './components/WeeklyWeather/WeeklyWeather';
 
 const App = () => {
   const nodeRef = useRef()
@@ -15,11 +16,11 @@ const App = () => {
   return (
     <div>
       <Header />
-      <img src="/icons/blob1.svg" className='bg-icon' width={100} alt="" />
-      <img src="/icons/blob1.svg" className='bg-icon' width={100} alt="" />
-      <img src="/icons/blob.svg" className='bg-icon' width={600} alt="" />
-      <img src="/icons/blob.svg" className='bg-icon' width={600} alt="" />
-      <img src="/icons/blob2.svg" className='bg-icon' width={600} alt="" />
+      <img src="/icons/blob1.svg" className='bg-icon' alt="" />
+      <img src="/icons/blob1.svg" className='bg-icon' alt="" />
+      <img src="/icons/blob.svg" className='bg-icon' alt="" />
+      <img src="/icons/blob.svg" className='bg-icon' alt="" />
+      <img src="/icons/blob2.svg" className='bg-icon' alt="" />
       <div className="container">
 
       {
@@ -41,6 +42,8 @@ const App = () => {
         }
 
       </CSSTransition>
+
+      <WeeklyWeather />
 
       </div>
     </div>

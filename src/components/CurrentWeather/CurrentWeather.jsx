@@ -14,6 +14,7 @@ const CurrentWeather = ({ weather, nodeRef }) => {
     }, [weather])
 
     return (
+        <>
             <div ref={nodeRef} className={styles.wrapper}>
                 <h3 className={styles.title}>{location.country}/{location.name}</h3>
                 <div className={styles.content}>
@@ -43,6 +44,7 @@ const CurrentWeather = ({ weather, nodeRef }) => {
                     </div>
                 </div>
             </div>
+        </>
     )
 }
 

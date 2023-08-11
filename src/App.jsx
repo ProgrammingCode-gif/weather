@@ -12,6 +12,7 @@ const App = () => {
   const nodeRef = useRef()
   const {loading, data: currentData} = useWeather()
   const [isWeekActive, setIsWeekActive] = useState(false)
+
   const { data, isLoading } = useQuery({
     queryKey: ['weeklyWeather'],
     queryFn: () => getWeeklyWeather(0, 0),
@@ -24,10 +25,12 @@ const App = () => {
   if (data) {
     console.log(data);
   }
+
   const {indicatorEl} = useLoading({
     loading,
     indicator: <Puff width="100" />
   })
+  
   return (
     <div>
       <Header />

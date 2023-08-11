@@ -13,7 +13,6 @@ export const useWeather = () => {
         onSuccess: () => {
             setTimeout(() => {
                 setLoading(false)
-
             }, 1000);
         }
     })

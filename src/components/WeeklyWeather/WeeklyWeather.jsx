@@ -1,10 +1,12 @@
 import styles from './WeeklyWeather.module.css'
 
-const WeeklyWeather = () => {
+const WeeklyWeather = ({isWeekActive, setIsWeekActive}) => {
 
     return (
         <div className={styles.wrapper}>
-            <button className={styles.btn}>Прогноз на неделю</button>
+            <button onClick={() => setIsWeekActive(!isWeekActive)} className={styles.btn}>
+                {isWeekActive? 'Скрыть' : 'Прогноз на неделю'}
+            </button>
         </div>
     )
 }

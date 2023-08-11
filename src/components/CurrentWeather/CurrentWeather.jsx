@@ -6,7 +6,7 @@ import { TiWeatherWindy } from 'react-icons/ti'
 import { useMemo } from 'react'
 import { getImage } from '../../utils/getImage'
 
-const CurrentWeather = ({ weather, nodeRef }) => {
+const CurrentWeather = ({ weather }) => {
     const { current, location } = useMemo(() => {
         const current = weather.current
         const location = weather.location
@@ -14,7 +14,7 @@ const CurrentWeather = ({ weather, nodeRef }) => {
     }, [weather])
 
     return (
-        <div ref={nodeRef} className={styles.wrapper}>
+        <div className={styles.wrapper}>
             <h3 className={styles.title}>{location.country}/{location.name}</h3>
             <div className={styles.content}>
 

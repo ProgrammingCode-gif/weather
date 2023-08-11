@@ -1,11 +1,11 @@
-import { useState } from 'react'
 import styles from './WeeklyWeather.module.css'
-import { useQuery } from 'react-query'
 
 const WeeklyWeather = () => {
 
     return (
-        <div className="">WeeklyWeather</div>
+        <div className={styles.wrapper}>
+            <button className={styles.btn}>Прогноз на неделю</button>
+        </div>
     )
 }
 

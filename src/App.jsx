@@ -38,12 +38,15 @@ const App = () => {
       >
 
         {
-          <CurrentWeather nodeRef={nodeRef} weather={data}/>
+          <div ref={nodeRef} className="">
+            <CurrentWeather weather={data}/>
+            <WeeklyWeather />
+
+          </div>
         }
 
       </CSSTransition>
 
-      <WeeklyWeather />
 
       </div>
     </div>

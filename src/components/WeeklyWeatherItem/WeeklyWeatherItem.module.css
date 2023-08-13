@@ -38,6 +38,12 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
 @media (max-width: 750px) {
     .wrapper {
         width: 100%;

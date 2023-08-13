@@ -2,6 +2,8 @@
     padding: 15px 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     background-color: #3e3d3d;
     border-radius: 20px;
@@ -13,4 +15,21 @@
 
 .wrapper:hover {
     transform: scale(1.05);
+}
+
+.date {
+    font-size: 21px;
+    font-weight: 700px;
+    color: white;
+}
+
+.temp {
+    font-size: 25px;
+    color: white;
+}
+
+@media (max-width: 750px) {
+    .wrapper {
+        width: 100%;
+    }
 }

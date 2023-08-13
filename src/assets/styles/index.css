@@ -21,6 +21,7 @@ body {
     max-width: 1320px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .current-enter {
@@ -84,4 +85,16 @@ body {
     top: -100px;
     right: -500px;
     width: 1000px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1100px;
+    }
+    .bg-icon {
+        display: none;
+    }
+    body {
+        overflow-y: auto;
+    }
 }

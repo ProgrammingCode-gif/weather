@@ -1,5 +1,5 @@
 .wrapper {
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 15px 20px;
     display: flex;
     flex-direction: column;
@@ -7,6 +7,15 @@
     background: #494949;
     border-radius: 10px;
     box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.196);
+    max-height: 80px;
+    transition: all 500ms ease-out;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.wrapperActive {
+    max-height: 1000px;
+    transition: max-height 300ms ease-in;
 }
 
 .btn {
@@ -31,4 +40,45 @@
     gap: 30px;
     justify-content: space-between;
     padding: 20px;
+}
+
+.loadingWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+    .wrapperActive {
+        max-height: 1000px;
+    }
+    .weekWrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 750px) {
+    .wrapperActive {
+        max-height: 1700px;
+        transition: max-height 700ms;
+    }
+    .wrapper {
+        align-items: center;
+    }
+    .btn {
+        width: 100%;
+    }
+
+    .weekWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        padding: 0;
+        margin-top: 30px;
+    }
 }

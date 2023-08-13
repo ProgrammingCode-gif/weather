@@ -78,4 +78,45 @@
 }
 
 
+@media (max-width: 950px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 
+    .contentLeft:hover {
+        transform: none;
+        background: transparent;
+        box-shadow: none;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .wrapper {
+        padding: 15px 20px;
+    }
+
+    .content {
+        width: 100%;
+    }
+    .contentRight {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contentRightItem {
+        width: 100%;
+    }
+
+    .contentRightItem p {
+        font-size: 15px;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+}

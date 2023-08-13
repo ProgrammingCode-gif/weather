@@ -8,10 +8,7 @@ export const useWeeklyWeather = () => {
     const { data, isLoading } = useQuery({
         queryKey: ['weeklyWeather'],
         queryFn: () => getWeeklyWeather(0, 0),
-        enabled: !!isWeekActive,
-        onSuccess: () => {
-            console.log('week');
-        }
+        enabled: !!isWeekActive
     })
 
     return { data, isLoading, isWeekActive, setIsWeekActive }

@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './WeeklyWeatherItem.module.css'
 
-const WeeklyWeatherItem = ({day}) => {
+const WeeklyWeatherItem = ({ day }) => {
   return (
     <div className={styles.wrapper}>
         {day.avgtemp_c}

@@ -21,7 +21,7 @@ const WeeklyWeather = ({ isWeekActive, setIsWeekActive, data, isLoading }) => {
                             data.forecast.forecastday.map(day => <WeeklyWeatherItem key={day.date_epoch} day={day.day}/>)
                         }
                     </div>
-                    : 'efefe'
+                    : ''
             }
         </div>
     )

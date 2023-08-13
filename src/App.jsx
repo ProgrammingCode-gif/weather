@@ -24,16 +24,16 @@ const App = () => {
       <div className="container">
 
       {
-        loading && 
+        loading &&
         <div className="loading-box">{indicatorEl}</div>
       }
 
-      <CSSTransition 
-        nodeRef={nodeRef} 
-        mountOnEnter 
-        unmountOnExit 
-        in={!loading} 
-        timeout={5000} 
+      <CSSTransition
+        nodeRef={nodeRef}
+        mountOnEnter
+        unmountOnExit
+        in={!loading}
+        timeout={5000}
         classNames='current'
       >
 

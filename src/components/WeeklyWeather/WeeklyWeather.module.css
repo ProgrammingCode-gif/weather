@@ -25,3 +25,10 @@
 .btn:hover {
     transform: scale(1.02);
 }
+
+.weekWrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 20px;
+}

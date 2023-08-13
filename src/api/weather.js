@@ -8,6 +8,6 @@ export const getCurrentWeather = async (lat, long) => {
 }
 
 export const getWeeklyWeather = async (lat, long) => {
-        const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${lat},${long}&aqi=no&alerts=no`);
+        const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${lat},${long}&days=7&aqi=no&alerts=no`);
         return response.data
 }

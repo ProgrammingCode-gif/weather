@@ -17,8 +17,12 @@
     transform: scale(1.05);
 }
 
+.icon {
+    width: 100px;
+}
+
 .date {
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 700px;
     color: white;
 }
@@ -26,6 +30,12 @@
 .temp {
     font-size: 25px;
     color: white;
+}
+
+@media (max-width: 1320px) {
+    .date {
+        font-size: 17px;
+    }
 }
 
 @media (max-width: 750px) {

@@ -15,6 +15,7 @@ body {
     background: #3c3c3c;
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .container {
@@ -88,6 +89,9 @@ body {
 }
 
 @media (max-width: 1200px) {
+    body {
+        overflow-y: auto;
+    }
     .container {
         max-width: 1100px;
     }
